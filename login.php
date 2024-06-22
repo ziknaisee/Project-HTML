@@ -1,32 +1,19 @@
-<?php
-session_start();
+<?php  
+// This file should act similar to config.php
 
-$servername = "your_server";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database";
+// Q1: Specify the servername, username and password to your local host
+$sname = "localhost";
+$uname = "root";
+$password = "";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Q2: Assign database to $db_name
+//     You can create a new database or just used the previous database mydb 
+$db_name = "mydb";
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Q2: Establish the connection with mysql
+$conn = mysqli_connect($sname, $uname, $password, $db_name);
+
+if (!$conn) {
+	echo "Connection Failed!";
+	exit();
 }
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $conn->real_escape_string($_POST['username']);
-    $pass = $conn->real_escape_string($_POST['password']);
-
-    $sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $user;
-        header("Location: index.html");
-    } else {
-        echo "Invalid username or password";
-    }
-}
-
-$conn->close();
-?>
