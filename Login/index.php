@@ -57,6 +57,7 @@ style="min-height: 100vh;"><!-- Q1: Set the form should go to check-login.php up
 		 
 		  <button type="submit" 
 		          class="btn btn-primary">LOGIN</button>
+			
 		</form>
       </div>
 </body>

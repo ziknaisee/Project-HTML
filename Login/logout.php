@@ -1,11 +1,11 @@
 <?php  
 session_start();
-// Q1: Unset session when logout
 
+// Unset and destroy the session when logging out
 session_unset();
 session_destroy();
-// Q2: Destroy session when logout
 
-// Q3: After session is destroyed, redirect to index.php
-header("Location: index.php");
+// Redirect to the shopping cart page after session is destroyed
+header("Location: ../index.php");
+exit();
 ?>

@@ -62,4 +62,5 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'
 		 }
         } else { // Q12: If username and password and role are null, redirect to index.php to enforce login
 	header("Location: index.php");
+	
 } ?>

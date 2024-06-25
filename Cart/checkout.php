@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
@@ -57,11 +57,7 @@ session_start();
         button:hover {
             background-color: #45a049;
         }
-        .empty-cart {
-            text-align: center;
-            font-style: italic;
-        }
-        .button-back, .button-checkout, .button-payment {
+        .button-back, .button-payment {
             display: block;
             width: 120px;
             margin: 20px auto;
@@ -72,49 +68,42 @@ session_start();
             text-decoration: none;
             border-radius: 4px;
         }
-        .button-back:hover, .button-checkout:hover, .button-payment:hover {
+        .button-back:hover, .button-payment:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Shopping Cart</h1>
+        <h1>Checkout</h1>
         <table>
             <thead>
                 <tr>
                     <th>Item</th>
                     <th>Price (RM)</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
+                $total_price = 0;
                 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-                    foreach ($_SESSION['cart'] as $key => $item) {
+                    foreach ($_SESSION['cart'] as $item) {
                         echo '
                         <tr>
                             <td>' . htmlspecialchars($item['name']) . '</td>
                             <td>RM ' . number_format($item['price'], 2) . '</td>
-                            <td>
-                                <form action="delete_cart.php" method="post">
-                                    <input type="hidden" name="item_key" value="' . $key . '">
-                                    <button type="submit">Delete</button>
-                                </form>
-                            </td>
                         </tr>';
+                        $total_price += $item['price'];
                     }
                 } else {
-                    echo '<tr><td colspan="3" class="empty-cart">Your cart is empty</td></tr>';
+                    echo '<tr><td colspan="2" class="empty-cart">Your cart is empty</td></tr>';
                 }
                 ?>
             </tbody>
         </table>
-        <button type="button" onclick="window.location.href='../index.php'" class="button-back">Back To Menu</button>
-        <?php if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
-            <button type="button" onclick="window.location.href='checkout.php'" class="button-checkout">Checkout</button>
-        <?php endif; ?>
-        <button type="button" onclick="window.location.href='confirmation.php'" class="button-payment">Make Payment</button>
+        <h2>Total Price: RM <?php echo number_format($total_price, 2); ?></h2>
+        <a href="shoping-cart.php" class="button-back">Back to Cart</a>
+        <a href="make_payment.php" class="button-payment">Make Payment</a>
     </div>
 </body>
 </html>

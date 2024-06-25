@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -81,7 +85,7 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
+                <li class="active"><a href="./index.php">Home</a></li>
                 <li><a href="./shop-grid.html">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
@@ -156,8 +160,8 @@
                             <!-- Login Modal End -->
                             <!-- Login Button -->
                             <div class="header__top__right__auth">
-                                <form action="Login/Student-PHPMultiRoleLoginSession/index.php" method="get">
-                                    <button type="submit" id="loginBtn" href="Login/Student-PHPMultiRoleLoginSession/index.php"><i class="fa fa-user"></i> Login</button>
+                                <form action="Login/index.php" method="get">
+                                    <button type="submit" id="loginBtn" href="Login/index.php"><i class="fa fa-user"></i> Login</button>
                                 </form>
                             </div>
                         </div>
@@ -175,7 +179,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
+                        <li class="active"><a href="./index.php">Home</a></li>
                             <li><a href="./shop-grid.html">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
