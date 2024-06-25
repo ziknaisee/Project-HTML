@@ -267,8 +267,8 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <form action="Cart/index.php" method="get">
+                                <button type="submit" id="loginBtn" > BUY</button>
                             </form>
 
                         </ul>
@@ -426,27 +426,18 @@
                             </form>
                         </ul>
                     </div>
-                    <script>
-                        $(document).ready(function(){
-                            $('.add-to-cart').on('click', function(event){
-                                event.preventDefault();
-                                var itemId = $(this).data('item-id');
                 
-                                $.ajax({
-                                    url: 'add_cart.php',
-                                    type: 'POST',
-                                    data: {
-                                        item_id: itemId
-                                    },
-                                    success: function(response){
-                                        alert('Item added to cart!');
-                                    },
-                                    error: function(){
-                                        alert('Error adding item to cart.');
-                                    }
-                                });
-                            });
-                        });
+
+
+                    <script>
+                        function addToCart(itemName, itemPrice) {
+                            var table = document.getElementById("shopping-cart-table");
+                            var row = table.insertRow();
+                            var cell1 = row.insertCell(0);
+                            var cell2 = row.insertCell(1);
+                            cell1.innerHTML = itemName;
+                            cell2.innerHTML = itemPrice.toFixed(2);
+                        }
                     </script>
                     <div class="featured__item__text">
                         <h6><a href="#">Egg: 6 pcs</a></h6>
