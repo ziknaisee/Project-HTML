@@ -4,12 +4,13 @@
 include 'db_conn.php';
 
 //Q2: sql to create table
-$sql = "CREATE TABLE users(
-  id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  role ENUM ('user','admin') NOT NULL,
+$sql = "CREATE TABLE customer (
+  id INT(6) NOT NULL AUTO_INCREMENT,
+  role ENUM ('user', 'admin') NOT NULL,
   username VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
-  name VARCHAR(255) NOT NULL, PRIMARY KEY(id)
+  name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
 )";
 
 if($conn->query($sql) === TRUE){

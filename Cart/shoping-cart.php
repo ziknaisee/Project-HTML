@@ -1,33 +1,5 @@
 <?php
 session_start();
-
-// Function to add an item to the cart
-function add_to_cart($name, $price) {
-    $item = array(
-        'name' => $name,
-        'price' => $price
-    );
-
-    // Initialize cart if it doesn't exist
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
-    }
-
-    // Add item to cart with a unique key
-    $key = md5($name); // Generate a unique key (you can use a better method for key generation)
-    $_SESSION['cart'][$key] = $item;
-}
-
-// Check if item was submitted from product listing page
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['item']) && isset($_POST['price'])) {
-        $itemName = $_POST['item'];
-        $itemPrice = $_POST['price'];
-        
-        // Add item to cart
-        add_to_cart($itemName, $itemPrice);
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="path/to/your/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Inline styles for demonstration; move these to your external CSS file */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -70,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         th {
             background-color: #f2f2f2;
+            color: #333;
         }
         td {
             vertical-align: middle;
@@ -88,6 +60,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .empty-cart {
             text-align: center;
             font-style: italic;
+        }
+        .button-back {
+            display: block;
+            width: 120px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .button-back:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -109,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         echo '
                         <tr>
                             <td>' . $item['name'] . '</td>
-                            <td>' . $item['price'] . '</td>
+                            <td>RM ' . number_format($item['price'], 2) . '</td>
                             <td>
                                 <form action="delete_cart.php" method="post">
                                     <input type="hidden" name="item_key" value="' . $key . '">
@@ -124,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ?>
             </tbody>
         </table>
-        <a href="shop-grid.html" class="button-back">BACK TO MENU</a>
+        <button onclick="window.location.href='shop-grid.html'" class="button-back">BACK TO MENU</button>
     </div>
 </body>
 </html>

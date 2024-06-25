@@ -16,7 +16,7 @@ if (isset($_GET['item']) && isset($_GET['price'])) {
 
     array_push($_SESSION['cart'], $item);
 
-    header("Location: cart.php");
+    header("Location: shoping-cart.php");
     exit();
 }
 ?>

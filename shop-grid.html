@@ -49,12 +49,13 @@
                 <div>English</div>
                 <span class="arrow_carrot-down"></span>
                 <ul>
+                    <li><a href="#">Spanis</a></li>
                     <li><a href="#">English</a></li>
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <form action="Login/Student-PHPMultiRoleLoginSession/index.php" method="get">
-                    <button type="submit" id="loginBtn" href="Login/Student-PHPMultiRoleLoginSession/index.php"><i class="fa fa-user"></i> Login</button>
+                <form action="Login/index.php" method="get">
+                    <button type="submit" id="loginBtn" href="Login/index.php"><i class="fa fa-user"></i> Login</button>
                 </form>
             </div>
         </div>
@@ -64,6 +65,7 @@
                 <li><a href="./shop-grid.html">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
                         <li><a href="./shoping-cart.html">Shopping Cart</a></li>
                         <li><a href="./checkout.html">Check Out</a></li>
                        
@@ -135,8 +137,8 @@
                                 <!-- Login Modal End -->
                                 <!-- Login Button -->
                                 <div class="header__top__right__auth">
-                                    <form action="Login/Student-PHPMultiRoleLoginSession/index.php" method="get">
-                                        <button type="submit" id="loginBtn" href="Login/Student-PHPMultiRoleLoginSession/index.php"><i class="fa fa-user"></i> Login</button>
+                                    <form action="Login/index.php" method="get">
+                                        <button type="submit" id="loginBtn" href="Login/index.php"><i class="fa fa-user"></i> Login</button>
                                     </form>
                                 </div>
                             </div>
@@ -158,6 +160,7 @@
                                 <li><a href="./shop-grid.html">Shop</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="header__menu__dropdown">
+                                        <li><a href="./shop-details.html">Shop Details</a></li>
                                         <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                                         <li><a href="./checkout.html">Check Out</a></li>
                                         
@@ -274,20 +277,13 @@
             </div>
         </div>
         <div class="row featured__filter">
-            <!-- Example product items -->
             <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-fruit">
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/banana.jpg">
                         <ul class="featured__item__pic__hover">
-<<<<<<< HEAD
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="shopping-cart.php" method="post">
-=======
-                            <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
                             <form action="Cart/add_cart.php" method="get">
->>>>>>> 713df6b0b5cb08102dfb0d10e742299ff738d457
                                 <input type="hidden" name="item" value="Banana: 500g">
                                 <input type="hidden" name="price" value="2.00">
                                 <button type="submit">BUY</button>
@@ -304,9 +300,9 @@
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/oranges.jpg">
                         <ul class="featured__item__pic__hover">
-                          <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Cart/shoping-cart.php" method="get">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
                                 <input type="hidden" name="item" value="Oranges: 4 pcs">
                                 <input type="hidden" name="price" value="6.00">
                                 <button type="submit">BUY</button>
@@ -323,9 +319,9 @@
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/barista-milk.png">
                         <ul class="featured__item__pic__hover">
-                           <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Cart/shoping-cart.php" method="get">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
                                 <input type="hidden" name="item" value="Barista Milk 1L">
                                 <input type="hidden" name="price" value="12.00">
                                 <button type="submit">BUY</button>
@@ -342,10 +338,12 @@
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/low-fat-milk.png">
                         <ul class="featured__item__pic__hover">
-                            <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Add to cart/shoping-cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Low Fat Milk 1L">
+                                <input type="hidden" name="price" value="6.00">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
@@ -355,15 +353,16 @@
                     </div>
                 </div>
             </div>
-            
             <div class="col-lg-3 col-md-4 col-sm-6 mix dairy">
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/farmfresh.png">
                         <ul class="featured__item__pic__hover">
-                            <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Fresh Milk 2L">
+                                <input type="hidden" name="price" value="12.00">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
@@ -377,10 +376,12 @@
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/bawangmerah.jpg">
                         <ul class="featured__item__pic__hover">
-                            <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Bawang Merah(Red Onion): 500g">
+                                <input type="hidden" name="price" value="2.00">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
@@ -394,10 +395,12 @@
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/cauliflower.jpg">
                         <ul class="featured__item__pic__hover">
-                        <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Cauliflower: 1 pcs">
+                                <input type="hidden" name="price" value="5.00">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
@@ -411,15 +414,17 @@
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/cucumber.jpg">
                         <ul class="featured__item__pic__hover">
-                            <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Cucumber: 1 pcs">
+                                <input type="hidden" name="price" value="2.00">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
                     <div class="featured__item__text">
-                        <h6><a href="#">Cucumbr: 1 pcs</a></h6>
+                        <h6><a href="#">Cucumber: 1 pcs</a></h6>
                         <h5>RM 2.00</h5>
                     </div>
                 </div>
@@ -428,43 +433,36 @@
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/nips.jpg">
                         <ul class="featured__item__pic__hover">
-                           <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Nips: 1 pcs">
+                                <input type="hidden" name="price" value="3.50">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
                     <div class="featured__item__text">
-                        <h6><a href="#">Nips</a></h6>
-                        <h5>RM 2.00</h5>
+                        <h6><a href="#">Nips: 1 pcs</a></h6>
+                        <h5>RM 3.50</h5>
                     </div>
                 </div>
             </div>
+        
             <div class="col-lg-3 col-md-4 col-sm-6 mix essential">
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/egg.jpg">
                         <ul class="featured__item__pic__hover">
-                            <!--  <li><a href="#"><i class="fa fa-heart"></i></a></li>-->
-                           <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Egg: 6 pcs">
+                                <input type="hidden" name="price" value="7.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
                     </div>
-                
-
-
-                    <script>
-                        function addToCart(itemName, itemPrice) {
-                            var table = document.getElementById("shopping-cart-table");
-                            var row = table.insertRow();
-                            var cell1 = row.insertCell(0);
-                            var cell2 = row.insertCell(1);
-                            cell1.innerHTML = itemName;
-                            cell2.innerHTML = itemPrice.toFixed(2);
-                        }
-                    </script>
+            
                     <div class="featured__item__text">
                         <h6><a href="#">Egg: 6 pcs</a></h6>
                         <h5>RM 7.00</h5>
@@ -477,7 +475,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Rice: 1 pcs">
+                                <input type="hidden" name="price" value="4.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -494,8 +494,10 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/add_cart.html"> BUY</button>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Daia Detergent">
+                                <input type="hidden" name="price" value="9.00">
+                                <button type="submit" id="loginBtn" href="/addcart.html"> BUY</button>
                             </form>
                         </ul>
                     </div>
@@ -511,7 +513,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Floor Cleaner">
+                                <input type="hidden" name="price" value="10.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -528,7 +532,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Ikan Bawal: 500g">
+                                <input type="hidden" name="price" value="20.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -545,7 +551,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Meat: 500g">
+                                <input type="hidden" name="price" value="15.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -562,7 +570,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Chicken Fillet:500g">
+                                <input type="hidden" name="price" value="9.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -579,7 +589,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Hausboom Lemonade">
+                                <input type="hidden" name="price" value="4.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -596,7 +608,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Hausboom strawberry">
+                                <input type="hidden" name="price" value="4.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -613,7 +627,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Panadol">
+                                <input type="hidden" name="price" value="5.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>
@@ -630,7 +646,9 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Koolfever">
+                                <input type="hidden" name="price" value="8.00">
                                 <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
                             </form>
                         </ul>

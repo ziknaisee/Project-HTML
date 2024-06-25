@@ -2,7 +2,7 @@
 <?php  
 session_start();
 // Import db_conn.php for database connection
-include "/db_conn.php";
+include "../db_conn.php";
 
 // Q1: Check session with isset function for all the login form input from index.php
 if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])){
@@ -34,7 +34,7 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'
 		$password = md5($password);
         
 		// Q6: Retrieve data from table users for user authentication
-        $sql = "SELECT * FROM users WHERE username='$username' AND password = '$password'";
+        $sql = "SELECT * FROM customer WHERE username='$username' AND password = '$password'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) === 1) {
@@ -61,5 +61,5 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'
 			}
 		 }
         } else { // Q12: If username and password and role are null, redirect to index.php to enforce login
-	header("Location: Login\Studentindex.php");
+	header("Location: index.php");
 } ?>

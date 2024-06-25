@@ -1,7 +1,7 @@
 <?php
 include 'db_connect.php';
 
-$sql = "SELECT id, category, item_name, price FROM items";
+$sql = "SELECT id, category, item, price FROM items";
 $result = $conn->query($sql);
 ?>
 
