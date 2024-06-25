@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -268,7 +269,7 @@
                     <div class="featured__item__text">
                         <h6><a href="#">Banana: 500g</a></h6>
                         <h5>RM 2.00</h5>
-                    </div>
+                   </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-fruit">
@@ -397,9 +398,31 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            <form action="Add to cart/add_cart.php" method="get"><li><a href="#" class="add-to-cart" data-item-id="9"><i class="fa fa-shopping-cart"></i></a></li> 
                         </ul>
                     </div>
+                    <script>
+                        $(document).ready(function(){
+                            $('.add-to-cart').on('click', function(event){
+                                event.preventDefault();
+                                var itemId = $(this).data('item-id');
+                
+                                $.ajax({
+                                    url: 'add_to_cart.php',
+                                    type: 'POST',
+                                    data: {
+                                        item_id: itemId
+                                    },
+                                    success: function(response){
+                                        alert('Item added to cart!');
+                                    },
+                                    error: function(){
+                                        alert('Error adding item to cart.');
+                                    }
+                                });
+                            });
+                        });
+                    </script>
                     <div class="featured__item__text">
                         <h6><a href="#">Egg: 6 pcs</a></h6>
                         <h5>RM 7.00</h5>

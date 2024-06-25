@@ -29,7 +29,7 @@ style="min-height: 100vh;"><!-- Q1: Set the form should go to check-login.php up
 			 
 			  <!-- Q#3: Remember to close the parentheses in PHP -->
 			 
-		  <div class="mb-3"">
+		  <div class="mb-3">
 		    <label for="username" 
 		           class="form-label">User name</label>
 		    <input type="text" 
