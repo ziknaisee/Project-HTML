@@ -1,20 +1,23 @@
 <?php
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if (isset($_GET['item']) && isset($_GET['price'])) {
     $item = $_GET['item'];
     $price = $_GET['price'];
 
-    // Initialize cart if not set
+    $item = array(
+        'name' => $item,
+        'price' => $price
+    );
+
     if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = [];
+        $_SESSION['cart'] = array();
     }
 
-    // Add item to cart
-    $_SESSION['cart'][] = ['name' => $item, 'price' => $price];
+    array_push($_SESSION['cart'], $item);
 
-    // Redirect to the shopping cart page
-    header("Location: ../shoping-cart.php");
+    header("Location: cart.php");
     exit();
 }
 ?>
+

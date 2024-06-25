@@ -1,7 +1,7 @@
 <?php
 include 'db_connect.php';
 
-$sql = "SELECT id, category, item, price FROM items";
+$sql = "SELECT id, category, item_name, price FROM items";
 $result = $conn->query($sql);
 ?>
 
@@ -10,67 +10,40 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Store Items</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        h2 {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-        }
-    </style>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css">
 </head>
 <body>
-
-<h1>Items</h1>
-
-<?php
-if ($result->num_rows > 0) {
-    $currentCategory = "";
-    while($row = $result->fetch_assoc()) {
-        if ($currentCategory != $row["category"]) {
-            if ($currentCategory != "") {
-                echo "</table>";
+    <div class="row featured__filter">
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '
+                <div class="col-lg-3 col-md-4 col-sm-6 mix ' . strtolower($row["category"]) . '">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/item/' . strtolower(str_replace(' ', '-', $row["item"])) . '.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <form action="Cart/add_cart.php" method="get">
+                                    <input type="hidden" name="item" value="' . $row["item"] . '">
+                                    <input type="hidden" name="price" value="' . $row["price"] . '">
+                                    <button type="submit">BUY</button>
+                                </form>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">' . $row["item"] . '</a></h6>
+                            <h5>RM ' . $row["price"] . '</h5>
+                        </div>
+                    </div>
+                </div>';
             }
-            $currentCategory = $row["category"];
-            echo "<h2>" . $currentCategory . "</h2>";
-            echo "<table>";
-            echo "<tr><th>Item</th><th>Price (RM)</th><th>Action</th></tr>";
+        } else {
+            echo '<p>No items found</p>';
         }
-        echo "<tr>";
-        echo "<td>" . $row["item"] . "</td>";
-        echo "<td>" . number_format($row["price"], 2) . "</td>";
-        echo "<td>
-                <form action='add_cart.php' method='get'>
-                    <input type='hidden' name='item' value='" . htmlspecialchars($row["item"]) . "'>
-                    <input type='hidden' name='price' value='" . htmlspecialchars($row["price"]) . "'>
-                    <button type='submit'>BUY</button>
-                </form>
-              </td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-} else {
-    echo "0 results";
-}
-$conn->close();
-?>
-
+        $conn->close();
+        ?>
+    </div>
 </body>
 </html>
