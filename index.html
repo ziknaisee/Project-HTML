@@ -146,7 +146,7 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Login</h2>
-        <form action="login.php" method="post">
+        <form action="index.php" method="get">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -163,8 +163,11 @@
 
 <!-- Login Button -->
 <div class="header__top__right__auth">
-    <a href="#" id="loginBtn"><i class="fa fa-user"></i> Login</a>
+    <form action="Login/Student-PHPMultiRoleLoginSession/index.php" method="get">
+        <button type="submit" id="loginBtn" href="Login/Student-PHPMultiRoleLoginSession/index.php"><i class="fa fa-user"></i> Login</button>
+    </form>
 </div>
+
 
                         </div>
                     </div>
