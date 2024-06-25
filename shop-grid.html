@@ -276,23 +276,24 @@
                 </div>
             </div>
         </div>
-        <div class="row featured__filter">
+         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-fruit">
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/banana.jpg">
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Cart/index.php" method="get">
-                                <button type="submit" id="loginBtn" > BUY</button>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Banana: 500g">
+                                <input type="hidden" name="price" value="2.00">
+                                <button type="submit">BUY</button>
                             </form>
-
                         </ul>
                     </div>
                     <div class="featured__item__text">
                         <h6><a href="#">Banana: 500g</a></h6>
                         <h5>RM 2.00</h5>
-                   </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-fruit">
@@ -301,8 +302,10 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Oranges: 4 pcs">
+                                <input type="hidden" name="price" value="6.00">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
@@ -318,8 +321,10 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="Add to cart/add_cart.php" method="get">
-                                <button type="submit" id="loginBtn" href="/shoping-cart.html"> BUY</button>
+                            <form action="Cart/add_cart.php" method="get">
+                                <input type="hidden" name="item" value="Barista Milk 1L">
+                                <input type="hidden" name="price" value="12.00">
+                                <button type="submit">BUY</button>
                             </form>
                         </ul>
                     </div>
@@ -346,6 +351,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-4 col-sm-6 mix dairy">
                 <div class="featured__item">
                     <div class="featured__item__pic set-bg" data-setbg="img/item/farmfresh.png">

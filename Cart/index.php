@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<h1>Grocery Store Items</h1>
+<h1>Items</h1>
 
 <?php
 if ($result->num_rows > 0) {
@@ -51,9 +51,19 @@ if ($result->num_rows > 0) {
             $currentCategory = $row["category"];
             echo "<h2>" . $currentCategory . "</h2>";
             echo "<table>";
-            echo "<tr><th>Item</th><th>Price (RM)</th></tr>";
+            echo "<tr><th>Item</th><th>Price (RM)</th><th>Action</th></tr>";
         }
-        echo "<tr><td>" . $row["item"] . "</td><td>" . number_format($row["price"], 2) . "</td></tr>";
+        echo "<tr>";
+        echo "<td>" . $row["item"] . "</td>";
+        echo "<td>" . number_format($row["price"], 2) . "</td>";
+        echo "<td>
+                <form action='add_cart.php' method='get'>
+                    <input type='hidden' name='item' value='" . htmlspecialchars($row["item"]) . "'>
+                    <input type='hidden' name='price' value='" . htmlspecialchars($row["price"]) . "'>
+                    <button type='submit'>BUY</button>
+                </form>
+              </td>";
+        echo "</tr>";
     }
     echo "</table>";
 } else {
