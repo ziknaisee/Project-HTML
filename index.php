@@ -86,16 +86,16 @@ session_start();
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="./index.php">Home</a></li>
-                <li><a href="./shop-grid.html">Shop</a></li>
+                <li><a href="./shop-grid.php">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="./shoping-cart.html">Shopping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="../shoping-cart.php">Shopping Cart</a></li>
+                        <li><a href="./Cart/checkout.php">Check Out</a></li>
                        
                     </ul>
                 </li>
                
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./contact.php">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -180,17 +180,17 @@ session_start();
                     <nav class="header__menu">
                         <ul>
                         <li class="active"><a href="./index.php">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
+                            <li><a href="./shop-grid.php">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
 
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
+                                    <li><a href="../shoping-cart.php">Shoping Cart</a></li>
+                                    <li><a href="./Cart/checkout.php">Check Out</a></li>
                                     
                                 </ul>
                             </li>
                            
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -516,7 +516,7 @@ session_start();
                     <ul>
                         <li><a href="index.html">About Us</a></li>
                         <li><a href="shop-grid.html">Shop With Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>

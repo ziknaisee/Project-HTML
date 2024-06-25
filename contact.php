@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -57,11 +60,11 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Shop</a></li>
+                <li class="active"><a href="./index.php">Home</a></li>
+                <li><a href="./shop-grid.php">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="./shoping-cart.html">Shopping Cart</a></li>
+                        <li><a href="./shoping-cart.php">Shopping Cart</a></li>
                         <li><a href="./checkout.html">Check Out</a></li>
                        
                     </ul>
@@ -151,17 +154,17 @@
                     <div class="col-lg-6">
                         <nav class="header__menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./shop-grid.html">Shop</a></li>
+                                <li class="active"><a href="./index.php">Home</a></li>
+                                <li><a href="./shop-grid.php">Shop</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="header__menu__dropdown">
-                                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                        <li><a href="./shoping-cart.php">Shoping Cart</a></li>
                                         <li><a href="./checkout.html">Check Out</a></li>
                                         
                                     </ul>
                                 </li>
                                
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="./contact.php">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -236,7 +239,7 @@
                     <div class="breadcrumb__text">
                         <h2>Contact Us</h2>
                         <div class="breadcrumb__option">
-                            <a href="./index.html">Home</a>
+                            <a href="./index.php">Home</a>
                             <span>Contact Us</span>
                         </div>
                     </div>
@@ -311,23 +314,25 @@
                     </div>
                 </div>
             </div>
-            <form action="#" enctype="multipart/form-data">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your name">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your Email">
-                    </div>
-                    <div class="col-lg-12 text-center">
-                        <textarea placeholder="Your message"></textarea>
-                        <input type="file" name="file" accept="image/jpeg,image/png,application/pdf">
-                        <button type="submit" class="site-btn">SEND MESSAGE</button>
-                    </div>
-                </div>
-            </form>
+            <form action="feedback.php" method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <input type="text" placeholder="Your name" name="name">
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <input type="text" placeholder="Your Email" name="email">
+        </div>
+        <div class="col-lg-12 text-center">
+            <textarea placeholder="Your message" name="message"></textarea>
+            <input type="file" name="file" accept="image/jpeg, image/png, application/pdf">
+            <button type="submit" class="site-btn">SEND MESSAGE</button>
         </div>
     </div>
+</form>
+
+        </div>
+    </div>
+    
     <!-- Contact Form End -->
 
     <!-- Footer Section Begin -->
@@ -352,9 +357,9 @@
                 <div class="footer__widget">
                     <h6>Useful Links</h6>
                     <ul>
-                        <li><a href="index.html">About Us</a></li>
-                        <li><a href="shop-grid.html">Shop With Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.php">About Us</a></li>
+                        <li><a href="shop-grid.php">Shop With Us</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>

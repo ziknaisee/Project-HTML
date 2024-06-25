@@ -43,7 +43,7 @@
     <div class="container">
         <h1>Payment Successful</h1>
         <p>Thank you for your purchase!</p>
-        <a href="shopping_cart.php" class="button-back">Back to Cart</a>
+        <a href="../index.php" class="button-back">Back to Cart</a>
     </div>
 </body>
 </html>

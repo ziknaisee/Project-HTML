@@ -29,7 +29,7 @@
 					<!-- Q5: Display out name of the admin -->
 			    	<?=$_SESSION['name']?>
 			    </h5>
-			    <a href="logout.php" class="btn btn-dark">Logout</a>
+			    <a href="logout.php" class="btn btn-dark">Lets Shop here</a>
 			  </div>
 			</div>
 			<div class="p-3">
@@ -76,7 +76,7 @@
 					<!-- Q7: Display out name of the admin -->
 			    	<?=$_SESSION['name']?>
 			    </h5>
-			    <a href="logout.php" class="btn btn-dark">Logout</a>
+			    <a href="logout.php" class="btn btn-dark">Lets Shop here</a>
 			  </div>
 			</div>
       	<?php } ?>

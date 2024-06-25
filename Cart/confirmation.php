@@ -43,7 +43,7 @@
     <div class="container">
         <h1>Checkout Successful!</h1>
         <p>Your items have been successfully checked out.</p>
-        <a href="shopping_cart.php" class="button-back">Back to Menu</a>
+        <a href="../index.php" class="button-back">Back to Menu</a>
         
     </div>
 </body>

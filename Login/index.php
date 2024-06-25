@@ -10,7 +10,8 @@
 	<!-- CSS bookstrap  -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
-<body style="background-color: mediumseagreen;">
+<body style="background-image: url('https://img.freepik.com/premium-photo/supermarket-future-no-people-generative-ai_213438-9956.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
 <div class="container d-flex justify-content-center align-items-center"
 style="min-height: 100vh;"><!-- Q1: Set the form should go to check-login.php upon submit with method post-->
       	<form class="border shadow p-3 rounded"

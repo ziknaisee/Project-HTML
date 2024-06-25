@@ -110,7 +110,7 @@ session_start();
                 ?>
             </tbody>
         </table>
-        <button type="button" onclick="window.location.href='../index.php'" class="button-back">Back To Menu</button>
+        <button type="button" onclick="window.location.href='../shop-grid.php'" class="button-back">Back To Menu</button>
         <?php if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
             <button type="button" onclick="window.location.href='checkout.php'" class="button-checkout">Checkout</button>
         <?php endif; ?>
